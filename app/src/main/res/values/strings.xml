@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Mini Mercari</string>
+    <string name="price">$%,d</string>
+    <string name="snackbar_message">You can not sell items.</string>
+    <string name="title">Mercari Sample App</string>
+</resources>

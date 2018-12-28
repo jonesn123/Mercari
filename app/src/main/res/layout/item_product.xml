@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <import type="com.example.simhyunyong.minimercaru.data.Product"/>
+
+        <variable
+                name="product"
+                type="com.example.simhyunyong.minimercaru.data.Product"/>
+
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical"
+            android:background="@drawable/border_bottom_cfd8dd">
+
+        <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@{product.thumbnailUrl}"
+                android:contentDescription="@{product.title}"/>
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_margin="10dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="@{product.title}"/>
+
+
+        <FrameLayout
+                android:id="@+id/sub_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <TextView
+                    android:id="@+id/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:text="@{Product.getProductType(product.albumId)}"
+                    android:layout_gravity="center_vertical"/>
+
+
+            <TextView
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@{@string/price(Product.getRandomPrice())}"
+                    android:textSize="12sp"/>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>
