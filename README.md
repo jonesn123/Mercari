@@ -2,4 +2,4 @@
 "Mini Mercari" Sample application
 
 ## Demo
-![Demo](/demo.gif)
+<img src="/demo.gif" width="40%">
